@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <title>GeoNerd LingGeek</title>
+        <style>
+            @import url('https://fonts.cdnfonts.com/css/whitney-2');
+
+            * {
+                color: rgb(255,255,255);
+                background-color: rgb(55,57,62);
+                font-family: Whitney;
+                text-decoration: none;
+            }
+
+            body {
+                margin: 0px;
+                align-items: center;
+            }
+
+            nav {
+                top: 0px;
+                height: 100%;
+                background-color: rgb(32,34,37);
+                margin: 0px;
+                padding: 0px;
+                position: fixed;
+            }
+
+            div.nav_button {
+                background-color: rgb(47,49,54);
+                height: 52px;
+                width: 52px;
+                margin: 10px;
+                padding: 0px;
+                border-radius: 50%;
+                font-size: 15px;
+                font-weight: 600;
+                text-align: center;
+                line-height: 52px;
+                transition: ease-in-out 0.2s;
+            }
+
+            div.nav_button:hover {
+                background-color: rgb(90,101,234);
+                border-radius: 37%;
+                transition: ease-in-out 0.2s;
+            }
+
+            div.button_hover {
+                visibility: hidden;
+                opacity: 0;
+                height: 35px;
+                width: max-content;
+                background-color: rgba(0, 0, 0, 0.6);
+                position: relative;
+                top: -43.5px;
+                left: 70px;
+                padding-left: 15px;
+                padding-right: 15px;
+                text-align: left;
+                font-weight: 600;
+                line-height: 35px;
+                border-radius: 9px;
+                transition: ease-in-out 0.2s;
+            }
+
+            div.nav_button:hover div.button_hover {
+                visibility: visible;
+                opacity: 100;
+                transition: ease-in-out 0.2s;
+            }
+
+            hr {
+                height: 0px;
+                width: 100%;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+            }
+
+            hr.nav_line {
+                height: 0px;
+                width: 25px;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+            }
+
+            h1.main_text {
+                background-color: transparent;
+                position: relative;
+                font-size: 15px;
+                left: 85px;
+            }
+
+            div.main_buttons {
+                background-color: transparent;
+                position: relative;
+                left: 80px;
+            }
+
+            button.button {
+                background-color: rgb(80,84,91);
+                height: 25px;
+                width: max-content;
+                padding: 15px;
+                border: 0px solid;
+                border-radius: 3px;
+                font-size: 15px;
+                line-height: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            function colour_change() {
+                if (window.location.href === "https://geonerd-linggeek.github.io") {
+                    document.getElementById("home").style.backgroundColor = "rgb(90,101,234)";
+                    document.getElementById("home").style.borderRadius = "37%";
+                    document.getElementById("home").style.transition = "ease-in-out 0.2s";
+                } else if (window.location.href === "https://geonerd-linggeek.github.io/games") {
+                    document.getElementById("games").style.backgroundColor = "rgb(90,101,234)";
+                    document.getElementById("games").style.borderRadius = "37%";
+                    document.getElementById("games").style.transition = "ease-in-out 0.2s";
+                } else if (window.location.href === "https://geonerd-linggeek.github.io/bots") {
+                    document.getElementById("bots").style.backgroundColor = "rgb(90,101,234)";
+                    document.getElementById("bots").style.borderRadius = "37%";
+                    document.getElementById("bots").style.transition = "ease-in-out 0.2s";
+                }
+            }
+
+            setInterval(colour_change, 100)
+        </script>
+        <br>
+        <h1 class="main_text">GeoNerd LingGeek</h1>
+        <hr>
+        <div class="main_buttons">
+            <a href="games"><button class="button">Games</button></a>
+            <a href="bots"><button class="button">Bots</button></a>
+        </div>
+        <nav>
+            <a href="">
+                <div class="nav_button" id="home">
+                    Home
+                    <div class="button_hover">Home</div>
+                </div>
+            </a>
+            <hr class="nav_line">
+            <a href="games">
+                <div class="nav_button" id="games">
+                    Games
+                    <div class="button_hover">Games</div>
+                </div>
+            </a>
+            <a href="bots">
+                <div class="nav_button" id="bots">
+                    Bots
+                    <div class="button_hover">Bots</div>
+                </div>
+            </a>
+        </nav>
+    </body>
+</html>
+    
