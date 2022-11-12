@@ -19,6 +19,10 @@ function sidebar_button_highlight() {
         document.getElementById("channels").style.backgroundColor = "rgb(90,101,234)";
         document.getElementById("channels").style.borderRadius = "37%";
         document.getElementById("channels").style.transition = "ease-in-out 0.2s";
+    } else if (window.location.href === "https://geonerd-linggeek.github.io/languages/") {
+        document.getElementById("languages").style.backgroundColor = "rgb(90,101,234)";
+        document.getElementById("languages").style.borderRadius = "37%";
+        document.getElementById("languages").style.transition = "ease-in-out 0.2s";
     }
 }
 
