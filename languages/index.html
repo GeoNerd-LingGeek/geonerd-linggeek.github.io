@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>GeoNerd LingGeek</title>
+        <link rel="stylesheet" href="../stylesheet.css">
+        <script type="text/javascript" src="../script.js"></script>
+        <script>
+            const card_words = ["смотреть", "думать", "стать", "быть", "сказать"];
+            const card_meanings = ["to see", "to think", "to become", "to be", "to say"];
+            var number = 0;
+            var shown = false;
+
+            function before() {
+                number--;
+                document.getElementById("flashcard").innerHTML = card_words[number];
+                document.getElementById("cardnumber").innerHTML = number + 1;
+                document.getElementById("wordmeaning").innerHTML = "";
+                document.getElementById("meaningbutton").innerHTML = "Show Meaning";
+                shown = false;
+            };
+
+            function next() {
+                number++;
+                document.getElementById("flashcard").innerHTML = card_words[number];
+                document.getElementById("cardnumber").innerHTML = number + 1;
+                document.getElementById("wordmeaning").innerHTML = "";
+                document.getElementById("meaningbutton").innerHTML = "Show Meaning";
+                shown = false;
+            };
+
+            function meaning() {
+                if (shown === true) {
+                    shown = false;
+                    document.getElementById("wordmeaning").innerHTML = "";
+                    document.getElementById("meaningbutton").innerHTML = "Show Meaning";
+                } else {
+                    shown = true;
+                    document.getElementById("wordmeaning").innerHTML = card_meanings[number];
+                    document.getElementById("meaningbutton").innerHTML = "Hide Meaning";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <br>
+        <h1 class="main_text">Languages</h1>
+        <hr>
+        <div class="main_buttons">
+            <h4>Russian Flashcards [β]</h4>
+            <div id="flashcard">смотреть</div>
+            <button onclick="before()">Before</button>
+            <span id="cardnumber">1</span>
+            <button onclick="next()">Next</button>
+            <br>
+            <button id="meaningbutton" onclick="meaning()">Show Meaning</button>
+            <span id="wordmeaning"></span>
+        </div>
+        <nav>
+            <a href="https://geonerd-linggeek.github.io/">
+                <div class="nav_button" id="home">
+                    H
+                    <div class="button_hover">Home</div>
+                </div>
+            </a>
+            <hr class="nav_line">
+            <a href="https://geonerd-linggeek.github.io/games/">
+                <div class="nav_button" id="games">
+                    G
+                    <div class="button_hover">Games</div>
+                </div>
+            </a>
+            <a href="https://geonerd-linggeek.github.io/languages/">
+                <div class="nav_button" id="languages">
+                    L
+                    <div class="button_hover">Languages</div>
+                </div>
+            </a>
+            <a href="https://geonerd-linggeek.github.io/channels/">
+                <div class="nav_button" id="channels">
+                    C
+                    <div class="button_hover">Channels</div>
+                </div>
+            </a>
+            <a href="https://geonerd-linggeek.github.io/bots/">
+                <div class="nav_button" id="bots">
+                    B
+                    <div class="button_hover">Bots</div>
+                </div>
+            </a>
+            <a href="https://geonerd-linggeek.github.io/about/">
+                <div class="nav_button" id="about">
+                    A
+                    <div class="button_hover">About</div>
+                </div>
+            </a>
+        </nav>
+    </body>
+</html>
