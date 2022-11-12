@@ -4,6 +4,16 @@
         <title>GeoNerd LingGeek</title>
         <link rel="stylesheet" href="../stylesheet.css">
         <script type="text/javascript" src="../script.js"></script>
+        <style>
+            div#flashcard {
+                width: max-content;
+                font-size: 30px;
+                padding: 25px;
+                margin: 10px;
+                border: 1px solid black;
+                border-radius: 8px;
+            }
+        </style>
         <script>
             const card_words = ["смотреть", "думать", "стать", "быть", "сказать"];
             const card_meanings = ["to see", "to think", "to become", "to be", "to say"];
@@ -48,11 +58,11 @@
         <div class="main_buttons">
             <h4>Russian Flashcards [β]</h4>
             <div id="flashcard">смотреть</div>
-            <button onclick="before()">Before</button>
+            <button class="button" onclick="before()">Before</button>
             <span id="cardnumber">1</span>
-            <button onclick="next()">Next</button>
+            <button class="button" onclick="next()">Next</button>
             <br>
-            <button id="meaningbutton" onclick="meaning()">Show Meaning</button>
+            <button class="button" id="meaningbutton" onclick="meaning()">Show Meaning</button>
             <span id="wordmeaning"></span>
         </div>
         <nav>
